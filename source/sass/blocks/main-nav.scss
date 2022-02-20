@@ -1,0 +1,148 @@
+.main-nav {
+  &__box {
+    width: 100%;
+    height: calc(100vh - 192px);
+    max-width: 285px;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    z-index: 10;
+    pointer-events: none;
+    overflow: hidden;
+    @include vp-800 {
+      max-width: 275px;
+      top: 48px;
+      left: auto;
+      right: 0;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    position: absolute;
+    top: 1px;
+    bottom: 4px;
+    left: -120%;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    background-color: rgba($color-default-white, 0.95);
+    transition: all $trans-default;
+    padding: 5px 8px;
+    box-shadow: 0px 3px 12px rgba($color-default-black, 0.29);
+    z-index: 5;
+    @include vp-800 {
+      max-width: 268px;
+      left: auto;
+      right: -120%;
+    }
+    &.is-active {
+      left: 0;
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+      @include vp-800 {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+  &__list-box {
+    padding: 16px 0;
+    &-title {
+      display: inline-block;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $color-default-black;
+      padding: 0 12px;
+      margin-bottom: 9px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &-item {
+      padding: 4px 7px;
+    }
+  }
+  &__link {
+    color: $color-Dark-Cerulean;
+    text-decoration: underline;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 22px;
+    transition: color $trans-default;
+    &:hover {
+      color: $color-Picton-Blue;
+    }
+  }
+
+  &__toggle {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $color-transparent;
+    border: none;
+    padding: 13px 9px 12px 9px;
+    margin: 0;
+    &-strip {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 9px;
+      right: 0;
+      width: calc(100% - 2*9px);
+      height: 3px;
+      background-color: $color-Dark-Cerulean;
+      transition: all $trans-default;
+      @include vp-800 {
+        left: 12px;
+        width: calc(100% - 2*12px);
+      }
+      &_top {
+        top: 13px;
+        @include vp-800 {
+          top: 16px;
+        }
+      }
+      &_middle {
+        top: 50%;
+        transform: translateY(-1px);
+      }
+      &_bottom {
+        top: auto;
+        bottom: 12px;
+        @include vp-800 {
+          bottom: 14px;
+        }
+      }
+    }
+    &.is-active & {
+      &-strip {
+        &_middle {
+          transform: translate(0, -50%) scale(0);
+        }
+        &_top {
+          transform: rotate(-45deg);
+          top: 23px;
+        }
+        &_bottom {
+          transform: rotate(45deg);
+          bottom: 22px;
+        }
+      }
+    }
+    @include vp-800 {
+      transform: translateX(8px);
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.work-with-us {
+	padding: 62px 0 60px;
+	@include vp-800 {
+		padding: 27px 0 33px;
+	}
+	&__partners {
+		margin-top: 53px;
+		@include vp-800 {
+			margin-top: 29px;
+		}
+	}
+	&__slider {
+		max-width: 960px;
+		min-height: 148px;
+		&.z-index--1 {
+			z-index: -1;
+		}
+		.swiper-wrapper {
+			transition-timing-function: linear;
+		}
+		.swiper-slide {
+			width: auto;
+		}
+		&-wrapper {
+			@include vp-1023 {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(80px, 1fr));
+				grid-template-rows: repeat(2, 1fr);
+				grid-gap: 10px;
+				justify-items: center;
+				// For IE
+				& > * {
+					justify-self: center;
+				}
+			}
+			@include vp-640 {
+				grid-template-columns: repeat(2, minmax(80px, 1fr));
+				grid-template-rows: repeat(3, 1fr);
+				grid-row-gap: 27px;
+			}
+		}
+		&-item {
+			width: 160px;
+			max-width: 160px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			@include vp-1023 {
+				width: 100%;
+				height: 100%;
+				justify-content: space-between;
+			}
+			&:hover & {
+				&-img {
+					transform: scale(1.1);
+				}
+			}
+			&-pic {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+			}
+			&-img {
+				transition: transform $trans-default;
+			}
+			&-title {
+				padding: 17px 0 0;
+				@include vp-800 {
+					padding: 6px 0 0;
+				}
+			}
+			&-name {
+				margin: 0;
+				font-size: 12px;
+				line-height: 16px;
+				font-weight: 600;
+				min-height: 33px;
+				padding: 0 5px;
+				text-align: center;
+			}
+		}
+	}
+}

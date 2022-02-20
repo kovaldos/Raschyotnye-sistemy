@@ -1,0 +1,25 @@
+.btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  transition: all $trans-default;
+  &--blue {
+    background-color: $color-Dark-Cerulean;
+  }
+  &--red {
+    background-color: $color-Crimson;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+}

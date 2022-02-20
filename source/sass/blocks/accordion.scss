@@ -1,0 +1,61 @@
+.accordion {
+	&__element {
+		@include vp-800 {
+			border-bottom: 1px solid rgba($color-default-black, 0.2);
+		}
+		&.is-active {
+			.accordion__button {
+				&-icon {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		position: relative;
+		pointer-events: none;
+		&:hover & {
+			&-pic,
+			&-title,
+			&-icon {
+				color: $color-Picton-Blue;
+			}
+		}
+		@include vp-800 {
+			pointer-events: all;
+		}
+		&-pic {
+			display: none;
+			@include vp-800 {
+				display: block;
+				color: $color-Dark-Cerulean;
+				margin-left: -5px;
+			}
+		}
+		&-icon {
+			display: none;
+			@include vp-800 {
+				width: 1em;
+				height: 1em;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $color-Dark-Cerulean;
+				transition: all $trans-default;
+				margin-right: -5px;
+			}
+		}
+	}
+
+	&__content {
+		max-height: 100%;
+		height: 100%;
+		@include vp-800 {
+			max-height: 0;
+		}
+	}
+}

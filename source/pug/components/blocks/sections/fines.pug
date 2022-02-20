@@ -1,0 +1,26 @@
+mixin fines ()
+	-
+		const data = {
+			title: "Штрафы ГИБДД",
+			text1: "Для поиска укажите номера водительского удостоверения и\u00A0свидетельства о\u00A0регистрации\u00A0ТС или номер штрафа.",
+			text2: "Если у\u00A0вас есть на\u00A0руках постановление о\u00A0штрафе, вы\u00A0можете указать реквизиты самостоятельно.",
+			title2: "Платить вовремя — дешевле!",
+			text3: "В\u00A0первые 20\u00A0дней после выдачи постановления штраф можно оплатить со\u00A0скидкой 50%. Для своевременной оплаты штрафов настройте уведомления в\u00A0Личном кабинете.",
+		}
+	section.section.section-fines#anchor01
+		.container.section__container
+			.section__wrapper.accordion(data-accordion="parent" data-single)
+				.section__text-block.accordion__element(data-accordion="element")
+					.accordion__button(data-accordion="button")
+						+icon("ic_gibdd1", 44, 44).accordion__button-pic
+						h2.section__title.accordion__button-title.title.title--h2=data.title
+						span.accordion__button-icon
+							+icon("ic_dropdown-arrow", 14, 14)
+					.accordion__content(data-accordion="content")
+						p.section__text.text-01=data.text1
+						p.section__text.text-02=data.text2 
+						h3.section__subtitle.title.title--h3=data.title2
+						p.section__text.text-03=data.text3
+				.section__pic 
+					+picture("content", "pic_block1", "jpg", 320, 320, "Сотрудник ГИБДД с поднятым жезлом")
+

@@ -1,0 +1,57 @@
+mixin workWithUs ()
+	-
+		const data = {
+			title: "С нами работают",
+			partners: [
+				{
+					src: "./img/svg/logo_partner1.svg",
+					alt: "Логотип партнёра",
+					href: "#",
+					name: "Партнёр 1",
+				},
+				{
+					src: "./img/svg/logo_partner2.svg",
+					alt: "Логотип партнёра",
+					href: "#",
+					name: "Компания-партнер с\u00A0длинным\u00A0названием",
+				},
+				{
+					src: "./img/svg/logo_partner3.svg",
+					alt: "Логотип партнёра",
+					href: "#",
+					name: "Партнёр 3",
+				},
+				{
+					src: "./img/svg/logo_partner4.svg",
+					alt: "Логотип партнёра",
+					href: "#",
+					name: "Название партнёра 4",
+				},
+				{
+					src: "./img/svg/logo_partner5.svg",
+					alt: "Логотип партнёра",
+					href: "#",
+					name: "Компания-партнёра 5",
+				},
+				{
+					src: "./img/svg/logo_partner6.svg",
+					alt: "Логотип партнёра",
+					href: "#",
+					name: "Партнер 6 с\u00A0длинным\u00A0названием",
+				},
+			],
+		}
+	section.work-with-us
+		.container.work-with-us__container 
+			h2.work-with-us__title.title.title--h1.title--center=data.title
+			.work-with-us__partners
+				.work-with-us__slider
+					.swiper-wrapper.work-with-us__slider-wrapper 
+						- for(let i = 0; i < 1; i++) // при необходимости можно раскомментировать в main.js слайдер, который будет работать в свободном режиме бегущей строки и свободной прокрутки свайпом. При этом добавить необходимые классы в разметку в соответствии с документацией swiper.js
+							each item in data.partners
+								.swiper-slide.work-with-us__slider-slide 
+									a.work-with-us__slider-item(href=item.href) 
+										.work-with-us__slider-item-pic
+											img(src=item.src, alt=item.alt).work-with-us__slider-item-img
+										.work-with-us__slider-item-title
+											h3.work-with-us__slider-item-name=item.name

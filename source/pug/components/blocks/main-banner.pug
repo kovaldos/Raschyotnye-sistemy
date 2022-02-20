@@ -1,0 +1,22 @@
+mixin mainBanner ()
+	-
+		const data = {
+			title: "Поиск начислений",
+			form: {
+				placeholder: "Введите данные для поиска",
+				btnText: "Найти",
+				text: "Чем больше параметров введено, тем полнее результаты поиска",
+			}
+		}
+	section.main-banner
+		//- +picture("content", "pic_main", "jpg", "100%", "100%", "Рука держит ручку над рабочим столом с документами")
+		.container.main-banner__container
+			.main-banner__heading
+				span.main-banner__title.title.title--h1=data.title
+			.main-banner__box-form
+				form.main-banner__form
+					.main-banner__form-inputs
+						input.main-banner__form-input(type="search" placeholder=data.form.placeholder name="search" required)
+						button.btn.btn--red.main-banner__form-btn(type="submit")=data.form.btnText
+							+icon("ic_search", 24, 24).btn.main-banner__form-btn_mobile
+					span.main-banner__form-text=data.form.text

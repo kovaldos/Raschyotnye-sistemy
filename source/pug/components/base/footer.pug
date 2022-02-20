@@ -1,0 +1,18 @@
+mixin footer(footerMods)
+  -
+    const data = {
+      copy: "© 2012 – 2020",
+      company: "ООО «Название компании»",
+    }
+
+  footer.footer(class=footerMods)
+    .container.footer__container 
+      .footer__wrapper 
+        .footer__block.footer__block_info
+          span.footer__block-span.span-copy=data.copy
+          span.footer__block-span.span-company=data.company
+        .footer__block.footer__block_logo
+          .footer__logo-pic 
+            +picture("content", "comodossl-trustlogo2", "png", "100%", 52, "Логотип Comodo Secure")
+  +modal("modal--log-in modal--no-scale modal--fit-content")(data-modal="log-in")
+    +modal-log-in()

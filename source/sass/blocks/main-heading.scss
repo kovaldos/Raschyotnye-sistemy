@@ -1,0 +1,56 @@
+.main-heading {
+	padding: 60px 0 16px;
+	@include vp-800 {
+		padding: 28px 0 17px;
+	}
+	&__title {
+		&_big {
+			@include vp-800 {
+				display: none;
+			}
+		}
+		&_small {
+			display: none;
+			@include vp-800 {
+				display: inline-block;
+			}
+		}
+	}
+	&__nav {
+		padding: 0 100px;
+		@include vp-800 {
+			display: none;
+		}
+		&-list {
+			display: flex;
+			justify-content: center;
+			list-style: none;
+			flex-wrap: wrap;
+			margin: 0;
+			padding: 8px 0 0;
+			&-item {
+				padding: 8px 14px 4px;
+			}
+			&-link {
+				padding: 5px 0;
+				color: $color-Dark-Cerulean;
+				font-size: 20px;
+				line-height: 16px;
+				border-bottom: 1px dashed $color-Dark-Cerulean-075;
+				transition: color $trans-default;
+				white-space: nowrap;
+				&:hover {
+					color: $color-Picton-Blue;
+				}
+			}
+			&-text {
+				display: block;
+				padding: 5px 0;
+				color: $color-default-black;
+				font-size: 20px;
+				line-height: 16px;
+				white-space: nowrap;
+			}
+		}
+	}
+}

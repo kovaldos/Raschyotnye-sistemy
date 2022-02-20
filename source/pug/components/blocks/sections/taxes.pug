@@ -1,0 +1,26 @@
+mixin taxes ()
+	-
+		const data = {
+			title: "Налоги",
+			text1: "Для поиска начислений по\u00A0налогам в\u00A0ГИС ГМП укажите ИНН или Индекс налогового документа, если у\u00A0вас на\u00A0руках есть квитанция.",
+			text2: "",
+			title2: "Важно!",
+			text3: "Согласно законодательству\u00A0РФ вы\u00A0не\u00A0можете оплачивать налоги за\u00A0других физических лиц. Принимаются только платежи физических лиц.",
+		}
+	section.section.section-taxes#anchor03
+		.container.section__container
+			.section__wrapper.accordion(data-accordion="parent" data-single)
+				.section__text-block.accordion__element(data-accordion="element")
+					.accordion__button(data-accordion="button")
+						+icon("ic_nalog", 44, 44).accordion__button-pic
+						h2.section__title.accordion__button-title.title.title--h2=data.title
+						span.accordion__button-icon
+							+icon("ic_dropdown-arrow", 14, 14)
+					.accordion__content(data-accordion="content")
+						p.section__text.text-01=data.text1
+						p.section__text.text-02=data.text2 
+						h3.section__subtitle.title.title--h3=data.title2
+						p.section__text.text-03=data.text3
+				.section__pic 
+					+picture("content", "pic_block3", "jpg", 320, 320, "Очки, ручка и конверт с гербом ФНС России рядом с компьютерной клавиатурой")
+

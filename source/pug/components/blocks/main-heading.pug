@@ -1,0 +1,37 @@
+mixin mainHeading ()
+	-
+		const data = {
+			titleBig: "Здесь можно оплатить",
+			titleSmall: "Узнайте, как оплатить",
+			links: [
+				{
+					href: "#anchor01",
+					text: "Штрафы ГИБДД",
+				},
+				{
+					href: "#anchor02",
+					text: "Судебные задолженности",
+				},
+				{
+					href: "#anchor03",
+					text: "Налоги",
+				},
+				{
+					href: "#anchor04",
+					text: "Услуги Росреестра",
+				},
+			],
+			text: "и другие услуги"
+		}
+	section.main-heading
+		.container.main-heading__container 
+			h1.main-heading__title.title.title--h1.title--center
+				span.main-heading__title_big=data.titleBig 
+				span.main-heading__title_small=data.titleSmall
+			nav.main-heading__nav 
+				ul.main-heading__nav-list 
+					each item, index in data.links
+						li.main-heading__nav-list-item
+							a.main-heading__nav-list-link(href=item.href)=item.text
+					li.main-heading__nav-list-item
+						span.main-heading__nav-list-text=data.text

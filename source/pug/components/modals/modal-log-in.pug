@@ -1,0 +1,27 @@
+mixin modal-log-in ()
+	-
+		const data = {
+			title: {
+				span1: "Введите логин и\u00A0пароль",
+				span2: " для входа в\u00A0Личный кабинет",
+			},
+			link1: {
+				href: "#",
+				text: "Напомнить пароль",
+			},
+			link2: {
+				href: "#",
+				text: "Регистрация",
+			}
+
+		}
+	.log-in__form-wrapper
+		h2.log-in__title.title
+			span=data.title.span1 
+			span=data.title.span2
+		form.log-in__form(action="#", method="post")
+			input.log-in__form-input(type="email", name="login" required pattern="^([A-Za-z0-9_\\-\\.])+@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$" placeholder="Логин")
+			input.log-in__form-input(type="password", name="password" required placeholder="Пароль")
+			input.btn.log-in__form-btn.btn--red(type="submit", value="Войти")
+		a.log-in__form-link(href=data.link1.href)=data.link1.text 
+		a.log-in__form-link(href=data.link2.href)=data.link2.text 

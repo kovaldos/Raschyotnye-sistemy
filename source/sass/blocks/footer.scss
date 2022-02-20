@@ -1,0 +1,46 @@
+.footer {
+  width: 100%;
+  background-color: $color-Dark-Cerulean-033;
+  min-height: 124px;
+  &__container {
+    width: 100%;
+    max-width: 1280px;
+    padding: 15px 33px;
+  }
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    @include vp-640 {
+      flex-direction: column;
+    }
+  }
+  &__block {
+    &_info {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 600;
+      padding: 8px 0 0;
+      @include vp-640 {
+        font-size: 12px;
+        line-height: 16px;
+        padding: 5px 0 0;
+      }
+    }
+    &-span {
+      display: block;
+      @include vp-640 {
+        display: inline-block;
+      }
+    }
+  }
+  &__logo-pic {
+    width: 79px;
+    padding: 3px 0;
+    @include vp-640 {
+      padding: 15px 0 0;
+    }
+  }
+}

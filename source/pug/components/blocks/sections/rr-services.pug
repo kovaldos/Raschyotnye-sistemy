@@ -1,0 +1,26 @@
+mixin rrServices ()
+	-
+		const data = {
+			title: "Услуги Росреестра",
+			text1: "В\u00A0поисковой строке укажите Код платежа, который был отправлен вам на\u00A0почтовый ящик, указанный при подаче запроса в\u00A0Росреестре.",
+			text2: "",
+			title2: "Нет кода?",
+			text3: `Если у\u00A0вас ещё нет кода платежа, перейдите на\u00A0сайт <a class="section__text-link" href="https://rosreestr.gov.ru/" target="_blank">rosreestr.ru</a> и\u00A0сформируйте запрос на\u00A0оплату электронных услуг Росреестра.`,
+		}
+	section.section.section-rr-services#anchor04 
+		.container.section__container
+			.section__wrapper.section__wrapper_reverse.accordion(data-accordion="parent" data-single)
+				.section__text-block.section__text-block_reverse.accordion__element(data-accordion="element")
+					.accordion__button(data-accordion="button")
+						+icon("ic_rr", 44, 44).accordion__button-pic
+						h2.section__title.accordion__button-title.title.title--h2=data.title
+						span.accordion__button-icon
+							+icon("ic_dropdown-arrow", 14, 14)
+					.accordion__content(data-accordion="content")
+						p.section__text.text-01=data.text1
+						p.section__text.text-02=data.text2 
+						h3.section__subtitle.title.title--h3=data.title2
+						p.section__text.text-03!=data.text3
+				.section__pic 
+					+picture("content", "pic_block4", "jpg", 320, 320, "Геодезист смотрит в окуляр тахеометра")
+

@@ -1,0 +1,112 @@
+.header {
+  width: 100%;
+  min-height: 68px;
+  background-color: $color-default-white;
+  z-index: 10;
+  @include vp-800 {
+    min-height: 48px;
+  }
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  &__container {
+    max-width: 1280px;
+    padding: 0 24px;
+    position: relative;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 0 5px;
+    @include vp-800 {
+      flex-direction: row-reverse;
+      padding: 0;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-56%);
+    @include vp-800 {
+      top: 9px;
+      left: 15px;
+      transform: none;
+      svg {
+        width: 195px;
+        height: 30px;
+      }
+    }
+  }
+  &__help-block {
+    @include vp-800 {
+      display: none;
+    }
+  }
+  &__btn-help {
+    background-color: $color-transparent;
+    z-index: 1;
+    &-pic {
+      pointer-events: none;
+    }
+  }
+  &__dropdown {
+    &-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 16px;
+      width: 100%;
+      max-width: 241px;
+      position: absolute;
+      top: 55px;
+      right: 16px;
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      background-color: $color-default-white;
+      transition: all $trans-default;
+      &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 11px 13px 11px;
+        border-color: transparent transparent #ffffff transparent;
+        position: absolute;
+        top: -13px;
+        right: 16px;
+      }
+      &.is-active {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+    &-tel {
+      font-size: 28px;
+      line-height: 38px;
+      font-weight: 600;
+    }
+    &-btn-close {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 600;
+      text-decoration: underline;
+      background-color: $color-transparent;
+      color: $color-Dark-Cerulean;
+      padding: 4px 0;
+      margin-top: 20px;
+      transition: color $trans-default;
+      &:hover {
+        color: $color-Picton-Blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.section {
+	padding: 60px 0;
+	@include vp-800 {
+		padding: 0;
+	}
+	&__container {
+		@include vp-800 {
+			padding: 0;
+		}
+	}
+	&__wrapper {
+		display: flex;
+		flex-direction: row;
+		&_reverse {
+			flex-direction: row-reverse;
+		}
+	}
+	&__title {
+		padding-bottom: 6px;
+		@include vp-800 {
+			width: fit-content;
+			padding: 0;
+			margin: 0 auto 0 20px;
+			font-size: 16px;
+			line-height: 24px;
+			color: $color-Dark-Cerulean;
+			border-bottom: 1px dashed $color-Dark-Cerulean-075;
+		}
+	}
+	&__text-block {
+		padding: 0 40px 0 0;
+		@include vp-1023 {
+			padding: 0 20px 0 0;
+			margin: 10px 0;
+		}
+		@include vp-800 {
+			margin: 0;
+			padding: 6px 20px 4px;
+			@include vp-320 {
+				padding: 6px 15px 4px;
+			}
+		}
+		&_reverse {
+			padding: 0 0 0 40px;
+			@include vp-1023 {
+				padding: 0 0 0 20px;
+			}
+			@include vp-800 {
+				margin: 0;
+				padding: 6px 20px 4px;
+			}
+			@include vp-320 {
+				padding: 6px 15px 4px;
+			}
+		}
+	}
+	&__text {
+		&.text-01 {
+			margin: 16px 0 10px 0;
+		}
+		&.text-02 {
+			margin: 12px 0;
+		}
+		&.text-03 {
+			margin: 0;
+			@include vp-800 {
+				margin: 0 0 15px;
+			}
+		}
+		&-link {
+			color: $color-Dark-Cerulean;
+			text-decoration: underline;
+			transition: all $trans-default;
+			&:hover {
+				text-decoration: none;
+				color: $color-Picton-Blue;
+			}
+		}
+	}
+	&__subtitle {
+		margin-top: 35px;
+		text-transform: uppercase;
+		@include vp-1023 {
+			margin-top: 23px;
+		}
+	}
+	&__pic {
+		flex: 0 0 320px;
+		height: 320px;
+		@include vp-800 {
+			display: none;
+		}
+	}
+}

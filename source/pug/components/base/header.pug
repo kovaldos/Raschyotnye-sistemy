@@ -1,0 +1,77 @@
+mixin header(headerMods, currentPage)
+  -
+    const data = {
+      listBox1: {
+        title: "Личный кабинет",
+        nav: [
+          {
+            link: "Вход в Личный кабинет",
+            href: "#",
+          },
+        ],
+      },
+      listBox2: {
+        title: "Как это работает",
+        nav: [
+          {
+            link: "Условия использования сервиса",
+            href: "#",
+          },
+          {
+            link: "Способы оплаты",
+            href: "#",
+          },
+          {
+            link: "Часто задаваемые вопросы",
+            href: "#",
+          },
+          {
+            link: "Служба поддержки",
+            href: "#",
+          },
+        ],
+      },
+      dropdown: {
+        title: "Тел. поддержки",
+        tel: "8 800 123-45-67",
+        btnCloseText: "Написать письмо",
+      }
+    }
+
+  header.header(class=headerMods data-fix-block)
+    .container.header__container
+      .header__wrapper
+        nav.main-nav
+          button.btn.main-nav__toggle.menu__icon(type="button" aria-label="Переключатель отображения меню" aria-pressed="false")
+            span.main-nav__toggle-strip.main-nav__toggle-strip_top
+            span.main-nav__toggle-strip.main-nav__toggle-strip_middle
+            span.main-nav__toggle-strip.main-nav__toggle-strip_bottom
+          .main-nav__box
+            .main-nav__wrapper.menu__body
+              .main-nav__list-box.main-nav__list-box_top
+                span.main-nav__list-box-title.title.title--h3=data.listBox1.title
+                ul.main-nav__list
+                  each item in data.listBox1.nav
+                    li.main-nav__list-item
+                      a.main-nav__link(href=item.href data-open-modal="log-in")=item.link
+              .main-nav__list-box.main-nav__list-box_bottom 
+                span.main-nav__list-box-title.title.title--h3=data.listBox2.title
+                ul.main-nav__list
+                  each item in data.listBox2.nav
+                    li.main-nav__list-item
+                      a.main-nav__link(href=item.href)=item.link
+        if(currentPage === "index")
+          //- lighthouse снимает 10 баллов SEO за <a> без href
+          .header__logo
+            +icon("logo_site-logo_full", 295, 44).header__logo-pic
+        else
+          a.header__logo(href="index.html" aria-label="Переход на главную")
+            +icon("logo_site-logo_full", 295, 44).header__logo-pic
+        .header__help-block
+          button.btn.header__btn-help
+            +icon("ic_help", 48, 48).header__btn-help-pic
+          .header__dropdown-block 
+            span.header__dropdown-title=data.dropdown.title
+            a.header__dropdown-tel(href="tel:+88001234567")=data.dropdown.tel
+            button.btn.header__dropdown-btn-close=data.dropdown.btnCloseText
+

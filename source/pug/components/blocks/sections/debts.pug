@@ -1,0 +1,26 @@
+mixin debts ()
+	-
+		const data = {
+			title: "Судебные задолженности",
+			text1: "Для поиска начислений в\u00A0ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства.",
+			text2: "Вы\u00A0можете указать реквизиты платежа самостоятельно, заполнив форму.",
+			title2: "Удобно!",
+			text3: "Судебные задолженности можно погасить как сразу, так и\u00A0по\u00A0частям, комфортными для вас платежами. Информацию о\u00A0совершенных платежах сохраняйте в\u00A0Личном кабинете.",
+		}
+	section.section.section-debts#anchor02 
+		.container.section__container
+			.section__wrapper.section__wrapper_reverse.accordion(data-accordion="parent" data-single)
+				.section__text-block.section__text-block_reverse.accordion__element(data-accordion="element")
+					.accordion__button(data-accordion="button")
+						+icon("ic_fssp", 44, 44).accordion__button-pic
+						h2.section__title.accordion__button-title.title.title--h2=data.title
+						span.accordion__button-icon
+							+icon("ic_dropdown-arrow", 14, 14)
+					.accordion__content(data-accordion="content")
+						p.section__text.text-01=data.text1
+						p.section__text.text-02=data.text2 
+						h3.section__subtitle.title.title--h3=data.title2
+						p.section__text.text-03=data.text3
+				.section__pic 
+					+picture("content", "pic_block2", "jpg", 320, 320, "Рука с молоточком судьи")
+
