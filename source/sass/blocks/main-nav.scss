@@ -1,14 +1,15 @@
 .main-nav {
   &__box {
     width: 100%;
-    height: calc(100vh - 192px);
+    height: calc(100vh - 192px);  // минус высота хедера и футера
     max-width: 285px;
     position: absolute;
     top: 68px;
     left: 0;
-    z-index: 10;
+    z-index: 99;
     pointer-events: none;
     overflow: hidden;
+    background-color: $color-transparent;
     @include vp-800 {
       max-width: 275px;
       top: 48px;
@@ -19,7 +20,7 @@
   &__wrapper {
     width: 100%;
     max-width: 280px;
-    height: auto;
+    height: 100%;
     position: absolute;
     top: 1px;
     bottom: 4px;
@@ -31,7 +32,8 @@
     transition: all $trans-default;
     padding: 5px 8px;
     box-shadow: 0px 3px 12px rgba($color-default-black, 0.29);
-    z-index: 5;
+    z-index: 100;
+    overflow-y: auto;
     @include vp-800 {
       max-width: 268px;
       left: auto;

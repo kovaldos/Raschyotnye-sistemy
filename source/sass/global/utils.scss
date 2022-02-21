@@ -51,6 +51,12 @@ html {
   overflow: hidden;
 }
 
+.is-locked {
+  @include vp-1023 {
+    overflow: hidden;
+  }
+}
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
