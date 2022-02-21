@@ -1,0 +1,28 @@
+.btn {
+	&__to-top {
+		width: 100%;
+		max-width: 5vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $color-transparent;
+		border: 0;
+		outline: none;
+		position: fixed;
+		top: auto;
+		left: auto;
+		right: 0;
+		bottom: 10vh;
+		transition: all $trans-default;
+		transform: translateX(120%);
+		&--is-shown {
+			transform: translateX(0);
+		}
+		&:hover {
+			opacity: 0.8;
+		}
+		&-pic {
+			color: $color-Picton-Blue;
+		}
+	}
+}

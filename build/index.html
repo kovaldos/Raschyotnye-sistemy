@@ -21,7 +21,10 @@
     <clipPath id="clip-path">
       <rect id="Rectangle_3" data-name="Rectangle 3" width="44" height="44" transform="translate(475 11)" fill="#fff" stroke="#707070" stroke-width="1"/>
     </clipPath>
-  </defs><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="ic_close" viewBox="0 0 24 24">
+  </defs><symbol id="icon-btn-to-top" viewBox="0 0 40 40">
+<circle cx="20" cy="20" r="20" fill="currentColor"/>
+<path d="M20.4549 13.6367L26.3596 23.864H14.5502L20.4549 13.6367Z" fill="white"/>
+</symbol><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="ic_close" viewBox="0 0 24 24">
   <g id="ic_close" transform="translate(-6 -6)">
     <rect id="Rectangle_31" data-name="Rectangle 31" width="24" height="24" transform="translate(6 6)" fill="none"/>
     <path id="Union_3" data-name="Union 3" d="M-778.527,850.174l-9.241,9.241-1.732-1.733,9.241-9.241-9.187-9.187,1.732-1.733,9.188,9.188,9.241-9.241,1.732,1.733-9.241,9.241,9.294,9.294-1.732,1.733Z" transform="translate(796.5 -830.467)" fill="currentColor"/>
@@ -159,168 +162,170 @@
             <h1 class="main-heading__title title title--h1 title--center"><span class="main-heading__title_big">Здесь можно оплатить</span><span class="main-heading__title_small">Узнайте, как оплатить</span></h1>
             <nav class="main-heading__nav"> 
               <ul class="main-heading__nav-list"> 
-                <li class="main-heading__nav-list-item"><a class="main-heading__nav-list-link" href="#anchor01">Штрафы ГИБДД</a></li>
-                <li class="main-heading__nav-list-item"><a class="main-heading__nav-list-link" href="#anchor02">Судебные задолженности</a></li>
-                <li class="main-heading__nav-list-item"><a class="main-heading__nav-list-link" href="#anchor03">Налоги</a></li>
-                <li class="main-heading__nav-list-item"><a class="main-heading__nav-list-link" href="#anchor04">Услуги Росреестра</a></li>
+                <li class="main-heading__nav-list-item"><a class="main-heading__nav-list-link" href="javascript:void(0)" data-scroll-to="anchor01">Штрафы ГИБДД</a></li>
+                <li class="main-heading__nav-list-item"><a class="main-heading__nav-list-link" href="javascript:void(0)" data-scroll-to="anchor02">Судебные задолженности</a></li>
+                <li class="main-heading__nav-list-item"><a class="main-heading__nav-list-link" href="javascript:void(0)" data-scroll-to="anchor03">Налоги</a></li>
+                <li class="main-heading__nav-list-item"><a class="main-heading__nav-list-link" href="javascript:void(0)" data-scroll-to="anchor04">Услуги Росреестра</a></li>
                 <li class="main-heading__nav-list-item"><span class="main-heading__nav-list-text">и другие услуги</span></li>
               </ul>
             </nav>
           </div>
         </section>
-        <section class="section section-fines" id="anchor01">
-          <div class="container section__container">
-            <div class="section__wrapper accordion" data-accordion="parent" data-single>
-              <div class="section__text-block accordion__element" data-accordion="element">
-                <div class="accordion__button" data-accordion="button">
-                  <svg class="accordion__button-pic" width="44" height="44" aria-hidden="true">
-                    <use xlink:href="#ic_gibdd1"></use>
-                  </svg>
-                  <h2 class="section__title accordion__button-title title title--h2">Штрафы ГИБДД</h2><span class="accordion__button-icon">
-                    <svg width="14" height="14" aria-hidden="true">
-                      <use xlink:href="#ic_dropdown-arrow"></use>
-                    </svg></span>
+        <div class="sections accordion" data-accordion="parent" data-single>
+          <section class="section section-fines" data-id="anchor01">
+            <div class="container section__container">
+              <div class="section__wrapper">
+                <div class="section__text-block accordion__element" data-accordion="element">
+                  <div class="accordion__button" data-accordion="button">
+                    <svg class="accordion__button-pic" width="44" height="44" aria-hidden="true">
+                      <use xlink:href="#ic_gibdd1"></use>
+                    </svg>
+                    <h2 class="section__title accordion__button-title title title--h2">Штрафы ГИБДД</h2><span class="accordion__button-icon">
+                      <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#ic_dropdown-arrow"></use>
+                      </svg></span>
+                  </div>
+                  <div class="accordion__content" data-accordion="content">
+                    <p class="section__text text-01">Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС или номер штрафа.</p>
+                    <p class="section__text text-02">Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты самостоятельно.</p>
+                    <h3 class="section__subtitle title title--h3">Платить вовремя — дешевле!</h3>
+                    <p class="section__text text-03">В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты штрафов настройте уведомления в Личном кабинете.</p>
+                  </div>
                 </div>
-                <div class="accordion__content" data-accordion="content">
-                  <p class="section__text text-01">Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС или номер штрафа.</p>
-                  <p class="section__text text-02">Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты самостоятельно.</p>
-                  <h3 class="section__subtitle title title--h3">Платить вовремя — дешевле!</h3>
-                  <p class="section__text text-03">В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты штрафов настройте уведомления в Личном кабинете.</p>
-                </div>
-              </div>
-              <div class="section__pic"> 
-                <picture>
-                  <source type="image/webp" srcset="img/content/pic_block1.webp, img/content/pic_block1@2x.webp 2x"><img src="img/content/pic_block1.jpg" srcset="img/content/pic_block1@2x.jpg 2x" width="320" height="320" alt="Сотрудник ГИБДД с поднятым жезлом">
-                </picture>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section section-debts" id="anchor02"> 
-          <div class="container section__container">
-            <div class="section__wrapper section__wrapper_reverse accordion" data-accordion="parent" data-single>
-              <div class="section__text-block section__text-block_reverse accordion__element" data-accordion="element">
-                <div class="accordion__button" data-accordion="button">
-                  <svg class="accordion__button-pic" width="44" height="44" aria-hidden="true">
-                    <use xlink:href="#ic_fssp"></use>
-                  </svg>
-                  <h2 class="section__title accordion__button-title title title--h2">Судебные задолженности</h2><span class="accordion__button-icon">
-                    <svg width="14" height="14" aria-hidden="true">
-                      <use xlink:href="#ic_dropdown-arrow"></use>
-                    </svg></span>
-                </div>
-                <div class="accordion__content" data-accordion="content">
-                  <p class="section__text text-01">Для поиска начислений в ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства.</p>
-                  <p class="section__text text-02">Вы можете указать реквизиты платежа самостоятельно, заполнив форму.</p>
-                  <h3 class="section__subtitle title title--h3">Удобно!</h3>
-                  <p class="section__text text-03">Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас платежами. Информацию о совершенных платежах сохраняйте в Личном кабинете.</p>
-                </div>
-              </div>
-              <div class="section__pic"> 
-                <picture>
-                  <source type="image/webp" srcset="img/content/pic_block2.webp, img/content/pic_block2@2x.webp 2x"><img src="img/content/pic_block2.jpg" srcset="img/content/pic_block2@2x.jpg 2x" width="320" height="320" alt="Рука с молоточком судьи">
-                </picture>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section section-taxes" id="anchor03">
-          <div class="container section__container">
-            <div class="section__wrapper accordion" data-accordion="parent" data-single>
-              <div class="section__text-block accordion__element" data-accordion="element">
-                <div class="accordion__button" data-accordion="button">
-                  <svg class="accordion__button-pic" width="44" height="44" aria-hidden="true">
-                    <use xlink:href="#ic_nalog"></use>
-                  </svg>
-                  <h2 class="section__title accordion__button-title title title--h2">Налоги</h2><span class="accordion__button-icon">
-                    <svg width="14" height="14" aria-hidden="true">
-                      <use xlink:href="#ic_dropdown-arrow"></use>
-                    </svg></span>
-                </div>
-                <div class="accordion__content" data-accordion="content">
-                  <p class="section__text text-01">Для поиска начислений по налогам в ГИС ГМП укажите ИНН или Индекс налогового документа, если у вас на руках есть квитанция.</p>
-                  <p class="section__text text-02"></p>
-                  <h3 class="section__subtitle title title--h3">Важно!</h3>
-                  <p class="section__text text-03">Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц. Принимаются только платежи физических лиц.</p>
-                </div>
-              </div>
-              <div class="section__pic"> 
-                <picture>
-                  <source type="image/webp" srcset="img/content/pic_block3.webp, img/content/pic_block3@2x.webp 2x"><img src="img/content/pic_block3.jpg" srcset="img/content/pic_block3@2x.jpg 2x" width="320" height="320" alt="Очки, ручка и конверт с гербом ФНС России рядом с компьютерной клавиатурой">
-                </picture>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section section-rr-services" id="anchor04"> 
-          <div class="container section__container">
-            <div class="section__wrapper section__wrapper_reverse accordion" data-accordion="parent" data-single>
-              <div class="section__text-block section__text-block_reverse accordion__element" data-accordion="element">
-                <div class="accordion__button" data-accordion="button">
-                  <svg class="accordion__button-pic" width="44" height="44" aria-hidden="true">
-                    <use xlink:href="#ic_rr"></use>
-                  </svg>
-                  <h2 class="section__title accordion__button-title title title--h2">Услуги Росреестра</h2><span class="accordion__button-icon">
-                    <svg width="14" height="14" aria-hidden="true">
-                      <use xlink:href="#ic_dropdown-arrow"></use>
-                    </svg></span>
-                </div>
-                <div class="accordion__content" data-accordion="content">
-                  <p class="section__text text-01">В поисковой строке укажите Код платежа, который был отправлен вам на почтовый ящик, указанный при подаче запроса в Росреестре.</p>
-                  <p class="section__text text-02"></p>
-                  <h3 class="section__subtitle title title--h3">Нет кода?</h3>
-                  <p class="section__text text-03">Если у вас ещё нет кода платежа, перейдите на сайт <a class="section__text-link" href="https://rosreestr.gov.ru/" target="_blank">rosreestr.ru</a> и сформируйте запрос на оплату электронных услуг Росреестра.</p>
-                </div>
-              </div>
-              <div class="section__pic"> 
-                <picture>
-                  <source type="image/webp" srcset="img/content/pic_block4.webp, img/content/pic_block4@2x.webp 2x"><img src="img/content/pic_block4.jpg" srcset="img/content/pic_block4@2x.jpg 2x" width="320" height="320" alt="Геодезист смотрит в окуляр тахеометра">
-                </picture>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="work-with-us">
-          <div class="container work-with-us__container"> 
-            <h2 class="work-with-us__title title title--h1 title--center">С нами работают</h2>
-            <div class="work-with-us__partners">
-              <div class="work-with-us__slider">
-                <div class="swiper-wrapper work-with-us__slider-wrapper"> 
-                  <div class="swiper-slide work-with-us__slider-slide"> <a class="work-with-us__slider-item" href="#"> 
-                      <div class="work-with-us__slider-item-pic"><img class="work-with-us__slider-item-img" src="./img/svg/logo_partner1.svg" alt="Логотип партнёра"></div>
-                      <div class="work-with-us__slider-item-title">
-                        <h3 class="work-with-us__slider-item-name">Партнёр 1</h3>
-                      </div></a></div>
-                  <div class="swiper-slide work-with-us__slider-slide"> <a class="work-with-us__slider-item" href="#"> 
-                      <div class="work-with-us__slider-item-pic"><img class="work-with-us__slider-item-img" src="./img/svg/logo_partner2.svg" alt="Логотип партнёра"></div>
-                      <div class="work-with-us__slider-item-title">
-                        <h3 class="work-with-us__slider-item-name">Компания-партнер с длинным названием</h3>
-                      </div></a></div>
-                  <div class="swiper-slide work-with-us__slider-slide"> <a class="work-with-us__slider-item" href="#"> 
-                      <div class="work-with-us__slider-item-pic"><img class="work-with-us__slider-item-img" src="./img/svg/logo_partner3.svg" alt="Логотип партнёра"></div>
-                      <div class="work-with-us__slider-item-title">
-                        <h3 class="work-with-us__slider-item-name">Партнёр 3</h3>
-                      </div></a></div>
-                  <div class="swiper-slide work-with-us__slider-slide"> <a class="work-with-us__slider-item" href="#"> 
-                      <div class="work-with-us__slider-item-pic"><img class="work-with-us__slider-item-img" src="./img/svg/logo_partner4.svg" alt="Логотип партнёра"></div>
-                      <div class="work-with-us__slider-item-title">
-                        <h3 class="work-with-us__slider-item-name">Название партнёра 4</h3>
-                      </div></a></div>
-                  <div class="swiper-slide work-with-us__slider-slide"> <a class="work-with-us__slider-item" href="#"> 
-                      <div class="work-with-us__slider-item-pic"><img class="work-with-us__slider-item-img" src="./img/svg/logo_partner5.svg" alt="Логотип партнёра"></div>
-                      <div class="work-with-us__slider-item-title">
-                        <h3 class="work-with-us__slider-item-name">Компания-партнёра 5</h3>
-                      </div></a></div>
-                  <div class="swiper-slide work-with-us__slider-slide"> <a class="work-with-us__slider-item" href="#"> 
-                      <div class="work-with-us__slider-item-pic"><img class="work-with-us__slider-item-img" src="./img/svg/logo_partner6.svg" alt="Логотип партнёра"></div>
-                      <div class="work-with-us__slider-item-title">
-                        <h3 class="work-with-us__slider-item-name">Партнер 6 с длинным названием</h3>
-                      </div></a></div>
+                <div class="section__pic"> 
+                  <picture>
+                    <source type="image/webp" srcset="img/content/pic_block1.webp, img/content/pic_block1@2x.webp 2x"><img src="img/content/pic_block1.jpg" srcset="img/content/pic_block1@2x.jpg 2x" width="320" height="320" alt="Сотрудник ГИБДД с поднятым жезлом">
+                  </picture>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+          <section class="section section-debts" data-id="anchor02">
+            <div class="container section__container">
+              <div class="section__wrapper section__wrapper_reverse">
+                <div class="section__text-block section__text-block_reverse accordion__element" data-accordion="element">
+                  <div class="accordion__button" data-accordion="button">
+                    <svg class="accordion__button-pic" width="44" height="44" aria-hidden="true">
+                      <use xlink:href="#ic_fssp"></use>
+                    </svg>
+                    <h2 class="section__title accordion__button-title title title--h2">Судебные задолженности</h2><span class="accordion__button-icon">
+                      <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#ic_dropdown-arrow"></use>
+                      </svg></span>
+                  </div>
+                  <div class="accordion__content" data-accordion="content">
+                    <p class="section__text text-01">Для поиска начислений в ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства.</p>
+                    <p class="section__text text-02">Вы можете указать реквизиты платежа самостоятельно, заполнив форму.</p>
+                    <h3 class="section__subtitle title title--h3">Удобно!</h3>
+                    <p class="section__text text-03">Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас платежами. Информацию о совершенных платежах сохраняйте в Личном кабинете.</p>
+                  </div>
+                </div>
+                <div class="section__pic"> 
+                  <picture>
+                    <source type="image/webp" srcset="img/content/pic_block2.webp, img/content/pic_block2@2x.webp 2x"><img src="img/content/pic_block2.jpg" srcset="img/content/pic_block2@2x.jpg 2x" width="320" height="320" alt="Рука с молоточком судьи">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section section-taxes" data-id="anchor03">
+            <div class="container section__container">
+              <div class="section__wrapper accordion">
+                <div class="section__text-block accordion__element" data-accordion="element">
+                  <div class="accordion__button" data-accordion="button">
+                    <svg class="accordion__button-pic" width="44" height="44" aria-hidden="true">
+                      <use xlink:href="#ic_nalog"></use>
+                    </svg>
+                    <h2 class="section__title accordion__button-title title title--h2">Налоги</h2><span class="accordion__button-icon">
+                      <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#ic_dropdown-arrow"></use>
+                      </svg></span>
+                  </div>
+                  <div class="accordion__content" data-accordion="content">
+                    <p class="section__text text-01">Для поиска начислений по налогам в ГИС ГМП укажите ИНН или Индекс налогового документа, если у вас на руках есть квитанция.</p>
+                    <p class="section__text text-02"></p>
+                    <h3 class="section__subtitle title title--h3">Важно!</h3>
+                    <p class="section__text text-03">Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц. Принимаются только платежи физических лиц.</p>
+                  </div>
+                </div>
+                <div class="section__pic"> 
+                  <picture>
+                    <source type="image/webp" srcset="img/content/pic_block3.webp, img/content/pic_block3@2x.webp 2x"><img src="img/content/pic_block3.jpg" srcset="img/content/pic_block3@2x.jpg 2x" width="320" height="320" alt="Очки, ручка и конверт с гербом ФНС России рядом с компьютерной клавиатурой">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section section-rr-services" data-id="anchor04"> 
+            <div class="container section__container">
+              <div class="section__wrapper section__wrapper_reverse">
+                <div class="section__text-block section__text-block_reverse accordion__element" data-accordion="element">
+                  <div class="accordion__button" data-accordion="button">
+                    <svg class="accordion__button-pic" width="44" height="44" aria-hidden="true">
+                      <use xlink:href="#ic_rr"></use>
+                    </svg>
+                    <h2 class="section__title accordion__button-title title title--h2">Услуги Росреестра</h2><span class="accordion__button-icon">
+                      <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#ic_dropdown-arrow"></use>
+                      </svg></span>
+                  </div>
+                  <div class="accordion__content" data-accordion="content">
+                    <p class="section__text text-01">В поисковой строке укажите Код платежа, который был отправлен вам на почтовый ящик, указанный при подаче запроса в Росреестре.</p>
+                    <p class="section__text text-02"></p>
+                    <h3 class="section__subtitle title title--h3">Нет кода?</h3>
+                    <p class="section__text text-03">Если у вас ещё нет кода платежа, перейдите на сайт <a class="section__text-link" href="https://rosreestr.gov.ru/" target="_blank">rosreestr.ru</a> и сформируйте запрос на оплату электронных услуг Росреестра.</p>
+                  </div>
+                </div>
+                <div class="section__pic"> 
+                  <picture>
+                    <source type="image/webp" srcset="img/content/pic_block4.webp, img/content/pic_block4@2x.webp 2x"><img src="img/content/pic_block4.jpg" srcset="img/content/pic_block4@2x.jpg 2x" width="320" height="320" alt="Геодезист смотрит в окуляр тахеометра">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="work-with-us">
+            <div class="container work-with-us__container"> 
+              <h2 class="work-with-us__title title title--h1 title--center">С нами работают</h2>
+              <div class="work-with-us__partners">
+                <div class="work-with-us__slider">
+                  <div class="swiper-wrapper work-with-us__slider-wrapper"> 
+                    <div class="swiper-slide work-with-us__slider-slide"> <a class="work-with-us__slider-item" href="#"> 
+                        <div class="work-with-us__slider-item-pic"><img class="work-with-us__slider-item-img" src="./img/svg/logo_partner1.svg" alt="Логотип партнёра"></div>
+                        <div class="work-with-us__slider-item-title">
+                          <h3 class="work-with-us__slider-item-name">Партнёр 1</h3>
+                        </div></a></div>
+                    <div class="swiper-slide work-with-us__slider-slide"> <a class="work-with-us__slider-item" href="#"> 
+                        <div class="work-with-us__slider-item-pic"><img class="work-with-us__slider-item-img" src="./img/svg/logo_partner2.svg" alt="Логотип партнёра"></div>
+                        <div class="work-with-us__slider-item-title">
+                          <h3 class="work-with-us__slider-item-name">Компания-партнер с длинным названием</h3>
+                        </div></a></div>
+                    <div class="swiper-slide work-with-us__slider-slide"> <a class="work-with-us__slider-item" href="#"> 
+                        <div class="work-with-us__slider-item-pic"><img class="work-with-us__slider-item-img" src="./img/svg/logo_partner3.svg" alt="Логотип партнёра"></div>
+                        <div class="work-with-us__slider-item-title">
+                          <h3 class="work-with-us__slider-item-name">Партнёр 3</h3>
+                        </div></a></div>
+                    <div class="swiper-slide work-with-us__slider-slide"> <a class="work-with-us__slider-item" href="#"> 
+                        <div class="work-with-us__slider-item-pic"><img class="work-with-us__slider-item-img" src="./img/svg/logo_partner4.svg" alt="Логотип партнёра"></div>
+                        <div class="work-with-us__slider-item-title">
+                          <h3 class="work-with-us__slider-item-name">Название партнёра 4</h3>
+                        </div></a></div>
+                    <div class="swiper-slide work-with-us__slider-slide"> <a class="work-with-us__slider-item" href="#"> 
+                        <div class="work-with-us__slider-item-pic"><img class="work-with-us__slider-item-img" src="./img/svg/logo_partner5.svg" alt="Логотип партнёра"></div>
+                        <div class="work-with-us__slider-item-title">
+                          <h3 class="work-with-us__slider-item-name">Компания-партнёра 5</h3>
+                        </div></a></div>
+                    <div class="swiper-slide work-with-us__slider-slide"> <a class="work-with-us__slider-item" href="#"> 
+                        <div class="work-with-us__slider-item-pic"><img class="work-with-us__slider-item-img" src="./img/svg/logo_partner6.svg" alt="Логотип партнёра"></div>
+                        <div class="work-with-us__slider-item-title">
+                          <h3 class="work-with-us__slider-item-name">Партнер 6 с длинным названием</h3>
+                        </div></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </main>
       <footer class="footer">
         <div class="container footer__container"> 
@@ -356,6 +361,11 @@
           </div>
         </div>
       </div>
+      <button class="btn btn__to-top" type="button">
+        <svg class="btn__to-top-pic" width="40" height="40" aria-hidden="true">
+          <use xlink:href="#icon-btn-to-top"></use>
+        </svg>
+      </button>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

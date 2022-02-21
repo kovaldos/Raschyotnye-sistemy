@@ -28,8 +28,12 @@ html(lang="ru")
 
       if (hasFooter)
         +footer(footerMods)
+      +modal("modal--log-in modal--no-scale modal--fit-content")(data-modal="log-in")
+        +modal-log-in()
+      +scrollToTop()
+      block modals
 
-    block modals
+
 
     script(src="js/vendor.min.js")
     script(src="js/main.min.js")

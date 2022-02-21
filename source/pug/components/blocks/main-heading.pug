@@ -5,20 +5,24 @@ mixin mainHeading ()
 			titleSmall: "Узнайте, как оплатить",
 			links: [
 				{
-					href: "#anchor01",
+					href: "javascript:void(0)",
 					text: "Штрафы ГИБДД",
+					anchor: "anchor01"
 				},
 				{
-					href: "#anchor02",
+					href: "javascript:void(0)",
 					text: "Судебные задолженности",
+					anchor: "anchor02"
 				},
 				{
-					href: "#anchor03",
+					href: "javascript:void(0)",
 					text: "Налоги",
+					anchor: "anchor03"
 				},
 				{
-					href: "#anchor04",
+					href: "javascript:void(0)",
 					text: "Услуги Росреестра",
+					anchor: "anchor04"
 				},
 			],
 			text: "и другие услуги"
@@ -32,6 +36,6 @@ mixin mainHeading ()
 				ul.main-heading__nav-list 
 					each item, index in data.links
 						li.main-heading__nav-list-item
-							a.main-heading__nav-list-link(href=item.href)=item.text
+							a.main-heading__nav-list-link(href=item.href data-scroll-to=item.anchor)=item.text
 					li.main-heading__nav-list-item
 						span.main-heading__nav-list-text=data.text

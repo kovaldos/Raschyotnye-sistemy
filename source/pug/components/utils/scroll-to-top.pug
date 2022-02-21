@@ -1,0 +1,11 @@
+mixin scrollToTop()
+   -
+      const data = {
+         text: "",
+         icon: "icon-btn-to-top",
+      }
+   button.btn.btn__to-top(type="button")
+      if data.icon
+         +icon(data.icon, 40, 40).btn__to-top-pic
+      if data.text
+         span.btn__to-top-span

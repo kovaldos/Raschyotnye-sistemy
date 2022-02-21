@@ -7,9 +7,9 @@ mixin debts ()
 			title2: "Удобно!",
 			text3: "Судебные задолженности можно погасить как сразу, так и\u00A0по\u00A0частям, комфортными для вас платежами. Информацию о\u00A0совершенных платежах сохраняйте в\u00A0Личном кабинете.",
 		}
-	section.section.section-debts#anchor02 
+	section.section.section-debts(data-id="anchor02")
 		.container.section__container
-			.section__wrapper.section__wrapper_reverse.accordion(data-accordion="parent" data-single)
+			.section__wrapper.section__wrapper_reverse
 				.section__text-block.section__text-block_reverse.accordion__element(data-accordion="element")
 					.accordion__button(data-accordion="button")
 						+icon("ic_fssp", 44, 44).accordion__button-pic

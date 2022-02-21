@@ -7,9 +7,9 @@ mixin taxes ()
 			title2: "Важно!",
 			text3: "Согласно законодательству\u00A0РФ вы\u00A0не\u00A0можете оплачивать налоги за\u00A0других физических лиц. Принимаются только платежи физических лиц.",
 		}
-	section.section.section-taxes#anchor03
+	section.section.section-taxes(data-id="anchor03")
 		.container.section__container
-			.section__wrapper.accordion(data-accordion="parent" data-single)
+			.section__wrapper.accordion
 				.section__text-block.accordion__element(data-accordion="element")
 					.accordion__button(data-accordion="button")
 						+icon("ic_nalog", 44, 44).accordion__button-pic

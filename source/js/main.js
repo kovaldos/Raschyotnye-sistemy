@@ -1,12 +1,15 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {initCustomSelect} from './modules/form/init-custom-select';
-import {initFormValidate} from './modules/form/init-form-validate';
+// import {initCustomSelect} from './modules/form/init-custom-select';
+// import {initFormValidate} from './modules/form/init-form-validate';
 import {initBurgerMenu} from './modules/burger-menu';
-import {initPartnersSlider} from './modules/partners-slider';
+// import {initPartnersSlider} from './modules/partners-slider';
 import {initDropdown} from './modules/dropdown';
 import {initAccordions} from './modules/init-accordion';
-import {initChangeH1Text} from './modules/change-h1-text';
+// import {initChangeH1Text} from './modules/change-h1-text';
+// import {initScrollToTop} from './utils/scroll-to top';
+import {initScrollToAnchor} from './modules/scroll-to-anchor';
+import {initBtnToTop} from './modules/scroll-to-top';
 
 // ---------------------------------
 
@@ -27,10 +30,13 @@ window.addEventListener('DOMContentLoaded', () => {
     initBurgerMenu();
     initDropdown();
     initModals();
+    // initScrollToTop();
+    initScrollToAnchor();
     // initCustomSelect();
     // initPartnersSlider();
     // initFormValidate();
     initAccordions();
+    initBtnToTop();
 
 
   });

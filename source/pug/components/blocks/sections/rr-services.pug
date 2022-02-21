@@ -7,9 +7,9 @@ mixin rrServices ()
 			title2: "Нет кода?",
 			text3: `Если у\u00A0вас ещё нет кода платежа, перейдите на\u00A0сайт <a class="section__text-link" href="https://rosreestr.gov.ru/" target="_blank">rosreestr.ru</a> и\u00A0сформируйте запрос на\u00A0оплату электронных услуг Росреестра.`,
 		}
-	section.section.section-rr-services#anchor04 
+	section.section.section-rr-services(data-id="anchor04") 
 		.container.section__container
-			.section__wrapper.section__wrapper_reverse.accordion(data-accordion="parent" data-single)
+			.section__wrapper.section__wrapper_reverse
 				.section__text-block.section__text-block_reverse.accordion__element(data-accordion="element")
 					.accordion__button(data-accordion="button")
 						+icon("ic_rr", 44, 44).accordion__button-pic

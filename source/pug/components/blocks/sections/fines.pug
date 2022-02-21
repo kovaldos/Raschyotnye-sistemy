@@ -7,9 +7,9 @@ mixin fines ()
 			title2: "Платить вовремя — дешевле!",
 			text3: "В\u00A0первые 20\u00A0дней после выдачи постановления штраф можно оплатить со\u00A0скидкой 50%. Для своевременной оплаты штрафов настройте уведомления в\u00A0Личном кабинете.",
 		}
-	section.section.section-fines#anchor01
+	section.section.section-fines(data-id="anchor01")
 		.container.section__container
-			.section__wrapper.accordion(data-accordion="parent" data-single)
+			.section__wrapper
 				.section__text-block.accordion__element(data-accordion="element")
 					.accordion__button(data-accordion="button")
 						+icon("ic_gibdd1", 44, 44).accordion__button-pic

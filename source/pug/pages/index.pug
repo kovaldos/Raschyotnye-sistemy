@@ -15,10 +15,11 @@ block main
     //- все блоки вставляются из папки pug/components/blocks
     +mainBanner()
     +mainHeading()
-    +fines()
-    +debts()
-    +taxes()
-    +rrServices()
-    +workWithUs()
+    .sections.accordion(data-accordion="parent" data-single)
+      +fines()
+      +debts()
+      +taxes()
+      +rrServices()
+      +workWithUs()
 
 block modals
