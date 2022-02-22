@@ -2312,7 +2312,7 @@ section {
 .main-nav__wrapper {
   width: 100%;
   max-width: 280px;
-  height: 100%;
+  height: auto;
   position: absolute;
   top: 1px;
   bottom: 4px;
